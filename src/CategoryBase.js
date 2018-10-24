@@ -2,6 +2,7 @@
 /* eslint camelcase: 0 */
 var OpenStreetBrowserLoader = require('./OpenStreetBrowserLoader')
 var tabs = require('modulekit-tabs')
+const ee = require('event-emitter')
 
 function CategoryBase (options, data) {
   if (typeof options === 'string') {
@@ -203,5 +204,7 @@ CategoryBase.prototype.notifyChildLoadEnd = function (category) {
     document.body.classList.remove('loading')
   }
 }
+
+ee(CategoryBase.prototype)
 
 module.exports = CategoryBase

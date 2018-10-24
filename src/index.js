@@ -31,6 +31,7 @@ require('./categories')
 require('./wikipedia')
 require('./image')
 require('./addCategories')
+require('./CategoryOverpassFilter')
 
 window.onload = function () {
   var initState = config.defaultView
